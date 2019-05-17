@@ -11,4 +11,9 @@ class Garage extends Model
         'marca', 'modelo', 'matricula','version','fecha_matriculacion', 'distintivo_medioambiental_dgt',
 
     ];
+
+    public function repairments()
+    {
+        return $this->hasMany('App\Repair');
+    }
 }
