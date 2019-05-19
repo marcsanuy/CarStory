@@ -17,10 +17,10 @@ class CreateGarageTable extends Migration
             $table->bigIncrements('id');
             $table->string('marca');
             $table->string('modelo');
-            $table->string('version');
-            $table->date('fecha_matriculacion');
+            $table->string('version')->nullable();
+            $table->date('fecha_matriculacion')->nullable();
             $table->string('matricula');
-            $table->string('distintivo_medioambiental_dgt');
+            $table->string('distintivo_medioambiental_dgt')->nullable();
             $table->string('imagen')->nullable();
             $table->timestamps();
         });

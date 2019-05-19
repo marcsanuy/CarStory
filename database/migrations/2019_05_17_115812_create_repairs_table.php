@@ -16,7 +16,12 @@ class CreateRepairsTable extends Migration
         Schema::create('repairs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('coche_id')->unsigned();
-            $table->string('name');
+            $table->string('accion');
+            $table->string('kilometros');
+            $table->date('fecha');
+            $table->string('precio');
+            $table->text('descripccion');
+            $table->string('imagen');
             $table->foreign('coche_id')->references('id')->on('garages');
             $table->timestamps();
         });

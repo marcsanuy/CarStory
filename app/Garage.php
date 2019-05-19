@@ -8,7 +8,7 @@ class Garage extends Model
 {
     protected $fillable = [
 
-        'marca', 'modelo', 'matricula','version','fecha_matriculacion', 'distintivo_medioambiental_dgt',
+        'marca', 'modelo', 'matricula','version','fecha_matriculacion', 'distintivo_medioambiental_dgt', 'imagen',
 
     ];
 
