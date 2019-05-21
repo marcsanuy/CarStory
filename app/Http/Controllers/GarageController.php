@@ -49,7 +49,7 @@ class GarageController extends Controller
         Garage::create($request->all());
         
         return redirect()->route('garages.index')
-                        ->with('succes', 'Coche añadido al garaje con éxito');
+                        ->with('success', 'Coche añadido al garaje con éxito');
     }
 
     /**
@@ -91,7 +91,7 @@ class GarageController extends Controller
         $garage->update($request->all());
         
         return redirect()->route('garages.index')
-                        ->with('succes', 'Coche modificado con éxito');
+                        ->with('success', 'Coche modificado con éxito');
     }
 
     /**

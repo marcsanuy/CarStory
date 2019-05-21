@@ -14,7 +14,13 @@ class RepairController extends Controller
      */
     public function index()
     {
-        //
+        $repairs = Repair::latest()->paginate(5);
+
+  
+
+        return view('repairs.index',compact('repairs'))
+
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -24,7 +30,7 @@ class RepairController extends Controller
      */
     public function create()
     {
-        //
+        return view('repairs.create');
     }
 
     /**
@@ -35,7 +41,17 @@ class RepairController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'accion' => 'required',
+            'kilometros' => 'required',
+            'fecha' => 'required',
+            'precio' => 'required',
+            'descripcion' => 'required',
+        ]);
+        Repair::create($request->all());
+        
+        return redirect()->route('repairs.index')
+                        ->with('success', 'Añadido con éxito');
     }
 
     /**
@@ -46,7 +62,8 @@ class RepairController extends Controller
      */
     public function show(Repair $repair)
     {
-        //
+        return view('repairs.show', compact('repair'));
+     
     }
 
     /**
@@ -57,7 +74,7 @@ class RepairController extends Controller
      */
     public function edit(Repair $repair)
     {
-        //
+        return view('repairs.edit', compact('repair'));
     }
 
     /**
@@ -69,7 +86,17 @@ class RepairController extends Controller
      */
     public function update(Request $request, Repair $repair)
     {
-        //
+        $request->validate([
+            'accion' => 'required',
+            'kilometros' => 'required',
+            'fecha' => 'required',
+            'precio' => 'required',
+            'descripcion' => 'required',
+        ]);
+        Repair::create($request->all());
+        
+        return redirect()->route('repairs.index')
+                        ->with('success', 'Modificado con éxito');
     }
 
     /**
@@ -80,6 +107,9 @@ class RepairController extends Controller
      */
     public function destroy(Repair $repair)
     {
-        //
+        $repair->delete();
+
+        return redirect()->route('repairs.index')
+                        ->with('success', 'Elminado con éxito');
     }
 }

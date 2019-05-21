@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('garages', 'GarageController');
+Route::resource('repairs', 'RepairController');
