@@ -76,7 +76,7 @@
 
             <td>{{ $repair->descripcion }}</td>
 
-            <td>{{ $garage->imagen }}</td>
+            <td>{{ $repair->imagen }}</td>
             
 
             <td>

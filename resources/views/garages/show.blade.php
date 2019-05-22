@@ -15,6 +15,8 @@
             <div class="pull-right">
 
                 <a class="btn btn-primary" href="{{ route('garages.index') }}"> Atrás</a>
+                <a class="btn btn-success" href="{{ route('repairs.create') }}/{{ $garage->id }}"> Añadir Acción</a>
+
 
             </div>
 

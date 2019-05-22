@@ -8,7 +8,7 @@ class Repair extends Model
 {
     protected $fillable = [
 
-        'accion', 'kilometros', 'fecha', 'precio', 'descripcion', 'imagen',
+        'coche_id', 'accion', 'kilometros', 'fecha', 'precio', 'descripcion', 'imagen',
 
     ];
 }
