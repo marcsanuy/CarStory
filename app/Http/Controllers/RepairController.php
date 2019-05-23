@@ -42,6 +42,7 @@ class RepairController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'coche_id'=> 'required',
             'accion' => 'required',
             'kilometros' => 'required',
             'fecha' => 'required',

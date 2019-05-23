@@ -15,5 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/repairs/create/{id}', function (){
+    return view('repairs.create');
+});
+
 Route::resource('garages', 'GarageController');
 Route::resource('repairs', 'RepairController');
