@@ -57,19 +57,21 @@
     @csrf
 
 
-    <div class="col-xs-12 col-sm-12 col-md-12">
-
-        <div class="form-group">
-
-            <strong></strong>
-
-            <input type="text" name="coche_id" class="form-control" placeholder="coche_id">
-
-        </div>
-
-    </div>
+   
 
     <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+
+                    <div class="form-group">
+            
+                        <strong></strong>
+            
+                        <input type="text" name="coche_id" class="form-control" placeholder="coche_id">
+            
+                    </div>
+            
+                </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
 
