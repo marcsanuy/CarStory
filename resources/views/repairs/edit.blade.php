@@ -59,12 +59,24 @@
     <div class="row">
 
             <div class="col-xs-12 col-sm-12 col-md-12">
+
+                    <div class="form-group">
+            
+                        <strong></strong>
+            
+                        <input type="text" name="coche_id" class="form-control" placeholder="coche_id" value="{{ $repair->coche_id }}">
+            
+                    </div>
+            
+                </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
     
                 <div class="form-group">
     
                     <strong></strong>
     
-                    <input type="text" name="accion" class="form-control" placeholder="Acción">
+                    <input type="text" name="accion" class="form-control" placeholder="Acción" value="{{ $repair->accion }}">
     
                     {{-- <input type="checkbox" name="mantenimiento" value="Mantenimiento"> Mantenimiento 
                     <input type="checkbox" name="reparacion" value="Reparación"> Reparación 
@@ -80,7 +92,7 @@
     
                     <strong></strong>
     
-                    <input type="text" name="kilometros" class="form-control" placeholder="Kilometros">
+                    <input type="text" name="kilometros" class="form-control" placeholder="Kilometros" value="{{ $repair->kilometros }}">
     
                 </div>
     
@@ -92,7 +104,7 @@
     
                     <strong></strong>
     
-                    <input type="date" name="fecha" class="form-control" placeholder="Fecha">
+                    <input type="date" name="fecha" class="form-control" placeholder="Fecha" value="{{ $repair->fecha }}">
     
                 </div>
     
@@ -104,7 +116,7 @@
     
                     <strong></strong>
     
-                    <input type="text" name="precio" class="form-control" placeholder="precio">
+                    <input type="text" name="precio" class="form-control" placeholder="precio" value="{{ $repair->precio }}">
     
                 </div>
     
@@ -116,7 +128,7 @@
     
                     <strong></strong>
     
-                    <input type="text" name="descripcion" class="form-control" placeholder="Descripción">
+                    <input type="text" name="descripcion" class="form-control" placeholder="Descripción" value="{{ $repair->descripcion }}">
                     
     
                 </div>
@@ -130,8 +142,8 @@
     
                     <strong></strong>
     
-                    <input type="src" name="imagen" class="form-control" placeholder="Imagen">
-    
+                    <input type="src" name="imagen" class="form-control" placeholder="Imagen" value="{{ $repair->imagen }}">
+      
                 </div>
     
             </div>
