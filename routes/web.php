@@ -21,3 +21,6 @@ Route::get('/repairs/create/{id}', function (){
 
 Route::resource('garages', 'GarageController');
 Route::resource('repairs', 'RepairController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
